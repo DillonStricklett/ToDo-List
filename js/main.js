@@ -27,11 +27,6 @@ function isValid() {
         var errSpan = getInputById("title").nextElementSibling;
         errSpan.innerHTML = "Please enter a Task.";
     }
-    if (getInputById("dueDate").value == null) {
-        isValid = false;
-        var errSpan = getInputById("dueDate");
-        errSpan.innerHTML = "Please chosse a Due Date.";
-    }
     return isValid;
 }
 function getToDoItem() {
@@ -50,6 +45,7 @@ function displayToDoItem(item) {
     var itemDate = document.createElement("p");
     itemDate.innerText = item.dueDate.toDateString();
     var itemDiv = document.createElement("div");
+    itemDiv.classList.add("todo");
     if (item.isCompleted) {
         itemDiv.classList.add("completed");
     }

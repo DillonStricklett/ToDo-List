@@ -40,11 +40,13 @@ function isValid():boolean{
         let errSpan = <HTMLSpanElement>getInputById("title").nextElementSibling;
         errSpan.innerHTML = "Please enter a Task."
     }
+    /*
     if(getInputById("dueDate").value == null){
         isValid = false;
         let errSpan = <HTMLSpanElement>getInputById("dueDate");
         errSpan.innerHTML = "Please chosse a Due Date."
     }
+    */
     return isValid;
 }
 
@@ -79,6 +81,7 @@ function displayToDoItem(item:ToDoItem):void{
     itemDate.innerText = item.dueDate.toDateString();
 
     let itemDiv = document.createElement("div");
+    itemDiv.classList.add("todo");
     if(item.isCompleted){
         itemDiv.classList.add("completed");
     }
