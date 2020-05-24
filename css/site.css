@@ -26,9 +26,27 @@
 
 #complete-items{
     border: .2em solid blue;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    width: 50%;
 }
 
 #incomplete-items{
-    border: .1em soild black;
+    border: .1em solid black;
     margin-bottom: 1em;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+#complete-items,
+#incomplete-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#all-items{
+    display: flex;
 }
